@@ -1,0 +1,32 @@
+<?
+$aMenuLinks = [
+	[
+		"Гибридные", 
+		"/catalog/bicycles/hybrid/", 
+		[], 
+		[], 
+		"" 
+	],
+	[
+		"Гоночные", 
+		"/catalog/bicycles/racing/", 
+		[], 
+		[], 
+		"" 
+	],
+	[
+		"Горные", 
+		"/catalog/bicycles/mountain/", 
+		[], 
+		[], 
+		"" 
+	],
+	[
+		"Городские", 
+		"/catalog/bicycles/urban/", 
+		[], 
+		[], 
+		"" 
+	]
+];
+?>
