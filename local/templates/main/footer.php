@@ -43,6 +43,20 @@
                     );?>
                 </ul>
             </nav>
+            <!-- Подписка на новостную рассылку -->
+            <?/*$APPLICATION->IncludeComponent(
+                "bitrix:subscribe.form", 
+                "newsletter", 
+                array(
+                    "CACHE_TIME" => "3600",
+                    "CACHE_TYPE" => "A",
+                    "PAGE" => "#SITE_DIR#/about/subscr_edit.php",
+                    "SHOW_HIDDEN" => "N",
+                    "USE_PERSONALIZATION" => "Y",
+                    "COMPONENT_TEMPLATE" => "newsletter"
+                ),
+                false
+            );*/?>
             <div class="footer__form">
                 <h2>подписаться на новости магазина go&ride</h2>
                 <form action="#">

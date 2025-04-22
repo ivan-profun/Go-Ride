@@ -41,7 +41,7 @@ $this->setFrameMode(true);
 					<div class="slider__item-wrp">
 						<img src="<?=$arItem['PREVIEW_PICTURE']['SRC'] ?>" alt="<?=$arItem['NAME'] ?>">
 						<div class="slider__item-content-wrp">
-							<h3><a href="/product?code=<?=$arItem['CODE'] ?>"><?=$arItem['NAME'] ?></a></h3>
+							<h3><a href="/catalog/detail.php?code=<?=$arItem['CODE'] ?>"><?=$arItem['NAME'] ?></a></h3>
 							<p><?=$arItem['COST'] ?> руб.</p>
 							<p>Артикул: <?=$arItem['CODE'] ?></p>
 						</div>

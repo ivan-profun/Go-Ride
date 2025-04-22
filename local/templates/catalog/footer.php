@@ -120,7 +120,7 @@
     </div>
 </footer>
 </body>
-<script src="/local/templates/main/js/slick.js"></script>
-<script src="/local/templates/main/js/scripts.js"></script>
+<script src="/local/templates/catalog/js/slick.js"></script>
+<script src="/local/templates/catalog/js/scripts.js"></script>
 
 </html>

@@ -33,7 +33,7 @@ if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
     <div class="container">
         <div class="header__wrp">
             <div class="header__wrp-nav header__wrp-nav--catalog">
-                <a href="index.html">
+                <a href="/">
                     <?$APPLICATION->IncludeComponent(
                         "bitrix:main.include", 
                         "includes", 

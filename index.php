@@ -136,9 +136,9 @@ $APPLICATION->SetTitle("Главная");
 );?> 
 <!-- Блок Скидка --> 
  <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"sale", 
-	array(
+	"bitrix:news.list",
+	"sale",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -159,11 +159,7 @@ $APPLICATION->SetTitle("Главная");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "NAME",
-			1 => "PREVIEW_PICTURE",
-			2 => "",
-		),
+		"FIELD_CODE" => array(0=>"NAME",1=>"PREVIEW_PICTURE",2=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "5",
@@ -182,11 +178,7 @@ $APPLICATION->SetTitle("Главная");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "",
-			1 => "PRODUCT_LINK",
-			2 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"",1=>"PRODUCT_LINK",2=>"",),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -199,8 +191,7 @@ $APPLICATION->SetTitle("Главная");
 		"SORT_ORDER1" => "RAND",
 		"SORT_ORDER2" => "",
 		"STRICT_SECTION_CHECK" => "N"
-	),
-	false
+	)
 );?>
 <!-- Блок Уже просмотрели -->
 <?$APPLICATION->IncludeComponent(
