@@ -26,28 +26,37 @@ $this->setFrameMode(true);
 
 ?>
 
-<!-- тут снова не работает слайдер, нужно пошаманить над css и js файлами, как в блоке Популярные товары на главной странице -->
-
-<section class="products">
-	<div class="container">
-	<?/* Может и динамически выводить название, но мне пока лень разбираться как это делать.
-	Поэтому, надо спросить как лучше, или проще это сделать, 
-	потому что можно легко вызвать CIBlockSection::GetByID($section['SECTION_ID'])->GetNext();
-	для получения имени родительского раздела и объеденить его с текущим для составления названия */?>
-		<h2>Горные велосипеды</h2>
-		<div class="slider slick-good-slider">
-			<? foreach ($arResult['ITEMS'] as $arItem): ?>
-				<div class="slider__item">
-					<div class="slider__item-wrp">
-						<img src="<?=$arItem['PREVIEW_PICTURE']['SRC'] ?>" alt="<?=$arItem['NAME'] ?>">
-						<div class="slider__item-content-wrp">
-							<h3><a href="/catalog/detail.php?code=<?=$arItem['CODE'] ?>"><?=$arItem['NAME'] ?></a></h3>
-							<p><?=$arItem['COST'] ?> руб.</p>
-							<p>Артикул: <?=$arItem['CODE'] ?></p>
-						</div>
+<div class="container">
+<?
+if (CModule::IncludeModule("iblock")) {
+    $sectionId = $arResult['IBLOCK_ID'];
+    $section = CIBlockSection::GetByID($sectionId)->GetNext();
+    if ($section) {
+        $parentId = $section['IBLOCK_SECTION_ID'];
+        if ($parentId) {
+            $parentSection = CIBlockSection::GetByID($parentId)->GetNext();
+            if ($parentSection) {
+                $parentName = $parentSection['NAME'];
+            }
+        }
+    }
+}
+$parentName = mb_strtolower($parentName);
+$titleSection = $arResult['NAME'].' '.$parentName;
+?>
+	<h2><?=$titleSection ?></h2>
+	<div class="slider slick-good-slider">
+		<? foreach ($arResult['ITEMS'] as $arItem): ?>
+			<div class="slider__item">
+				<div class="slider__item-wrp">
+					<img src="<?=$arItem['PREVIEW_PICTURE']['SRC'] ?>" alt="<?=$arItem['NAME'] ?>">
+					<div class="slider__item-content-wrp">
+						<h3><a href="/catalog/detail.php?code=<?=$arItem['CODE'] ?>"><?=$arItem['NAME'] ?></a></h3>
+						<p><?=$arItem['COST'] ?> руб.</p>
+						<p>Артикул: <?=$arItem['CODE'] ?></p>
 					</div>
 				</div>
-			<? endforeach; ?>
- 		</div>
+			</div>
+		<? endforeach; ?>
 	</div>
-</section>
+</div>

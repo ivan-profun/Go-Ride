@@ -45,10 +45,10 @@ foreach ($arResult['SECTIONS'] as $arItem) {
 		<ul>
 			<? foreach ($arSections as $arSec): ?>
 				<li>
-					<a href="/<?=$arSec['CODE'] ?>"><?=$arSec['NAME'] ?></a>
+					<a href="/catalog/<?=$arSec['CODE'] ?>"><?=$arSec['NAME'] ?></a>
 					<ul class="header__sub-catalog-categories" style="bottom: <?=$arSec['CODE']=='bicycles' ? 98 : -98*2 ?>px !important">
 						<? foreach ($arSec['CHILDREN'] as $arElement): ?>
-							<li><a href="/<?=$arSec['CODE'] ?>/<?=$arElement['CODE'] ?>"><?=$arElement['NAME'] ?></a></li>
+							<li><a href="/catalog/<?=$arSec['CODE'] ?>/<?=$arElement['CODE'] ?>"><?=$arElement['NAME'] ?></a></li>
 						<? endforeach; ?> 
 					</ul>
 				</li>
